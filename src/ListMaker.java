@@ -10,13 +10,11 @@ public class ListMaker
         String itemToAdd;
         int indexToInsert;
         boolean done = false;
-
         String cmdRegEx = "[AaDdIiPpQq]";
 
         do{
             showMenu();
             String cmd = SafeInput.getRegExString(in, "Enter a command (A, D, I, P, Q)", cmdRegEx);
-
             switch (cmd.toUpperCase())
             {
                 case "A":
@@ -66,13 +64,9 @@ public class ListMaker
 
     private static void showList(ArrayList<String> lines)
     {
-        System.out.println();
         System.out.println("Current List");
         for(int i = 0; i < lines.size(); i++)
-        {
             System.out.println((i + 1) + ": " + lines.get(i));
-        }
-        System.out.println();
     }
 
     private static void showMenu()
